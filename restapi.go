@@ -1580,9 +1580,12 @@ func (s *Session) ChannelMessageSendComplex(channelID string, data *MessageSend)
 	} else {
 		response, err = s.RequestWithBucketID("POST", endpoint, data, endpoint)
 	}
+	fmt.Printf("response: %+v\n", response)
+	fmt.Printf("err: %+v\n", err)
 	if err != nil {
 		return
 	}
+
 
 	err = unmarshal(response, &st)
 	return
