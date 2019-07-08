@@ -56,12 +56,6 @@ func (s *Session) RequestWithBucketID(method, urlStr string, data interface{}, b
 		}
 	}
 
-	fmt.Printf("method: %v\n", method)
-	fmt.Printf("urlStr: %v\n", urlStr)
-	fmt.Printf("data: %+v\n", data)
-	fmt.Printf("body: %+v\n", body)
-	fmt.Printf("bucketID: %v\n", bucketID)
-
 	return s.request(method, urlStr, "application/json", body, bucketID, 0)
 }
 
@@ -1580,8 +1574,6 @@ func (s *Session) ChannelMessageSendComplex(channelID string, data *MessageSend)
 	} else {
 		response, err = s.RequestWithBucketID("POST", endpoint, data, endpoint)
 	}
-	fmt.Printf("response: %+v\n", response)
-	fmt.Printf("err: %+v\n", err)
 	if err != nil {
 		return
 	}
