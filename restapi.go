@@ -56,11 +56,11 @@ func (s *Session) RequestWithBucketID(method, urlStr string, data interface{}, b
 		}
 	}
 
-	fmt.Println("method: %v", method)
-	fmt.Println("urlStr: %v", urlStr)
-	fmt.Println("data: %+v", data)
-	fmt.Println("body: %+v", body)
-	fmt.Println("bucketID: %v", bucketID)
+	fmt.Printf("method: %v", method)
+	fmt.Printf("urlStr: %v", urlStr)
+	fmt.Printf("data: %+v", data)
+	fmt.Printf("body: %+v", body)
+	fmt.Printf("bucketID: %v", bucketID)
 
 	return s.request(method, urlStr, "application/json", body, bucketID, 0)
 }
