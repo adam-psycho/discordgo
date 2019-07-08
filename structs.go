@@ -216,10 +216,6 @@ type Channel struct {
 	// The type of the channel.
 	Type ChannelType `json:"type"`
 
-	// The ID of the last message sent in the channel. This is not
-	// guaranteed to be an ID of a valid message.
-	LastMessageID int `json:"last_message_id"`
-
 	// Whether the channel is marked as NSFW.
 	NSFW bool `json:"nsfw"`
 
@@ -680,7 +676,6 @@ type TooManyRequests struct {
 // A ReadState stores data on the read state of channels.
 type ReadState struct {
 	MentionCount  int    `json:"mention_count"`
-	LastMessageID int    `json:"last_message_id"`
 	ID            string `json:"id"`
 }
 
