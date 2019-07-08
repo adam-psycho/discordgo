@@ -58,7 +58,7 @@ func (s *Session) RequestWithBucketID(method, urlStr string, data interface{}, b
 
 	fmt.Println("method: %v", method)
 	fmt.Println("urlStr: %v", urlStr)
-	fmt.Println("body: %v", body)
+	fmt.Println("body: %v", data)
 	fmt.Println("bucketID: %v", bucketID)
 
 	return s.request(method, urlStr, "application/json", body, bucketID, 0)
